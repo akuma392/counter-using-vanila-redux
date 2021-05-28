@@ -16,7 +16,7 @@ let max200 = document.querySelector('.max200');
 
 let countSteps = {
   stepValue: '',
-  maxValue: '',
+  maxValue: Infinity,
 };
 
 h1.innerText = counter;
@@ -42,6 +42,7 @@ reset.addEventListener('click', () => {
 
 step5.addEventListener('click', () => {
   countSteps.stepValue = 5;
+
   if (countSteps.stepValue === 5) {
     step5.classList.add('active');
     step10.classList.remove('active');
@@ -74,6 +75,7 @@ max15.addEventListener('click', () => {
 });
 max100.addEventListener('click', () => {
   countSteps.maxValue = 100;
+
   if (countSteps.maxValue === 100) {
     max100.classList.add('active');
     max15.classList.remove('active');
